@@ -6,7 +6,8 @@ import {countries} from "./model/countries.ts";
 const register = (e: SyntheticEvent<Element, Event>) => {
     e.preventDefault();
 
-    const form: EventTarget = e.target;
+    // todo: e.target vs. e.currentTarget
+    const form: HTMLFormElement = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
     const name: string = formData.get('name') as string;
@@ -32,13 +33,13 @@ function UserForm() {
                     </label>
                 </section>
                 <section>
-                    <label>e-Mail:{' '}
+                    <label>EMail:{' '}
                         <input type="email" name="email"/>
                     </label>
                 </section>
                 <section>
                     <label>Age:{' '}
-                        <input type="number" name="age" defaultValue={0}/>
+                        <input type="number" name="age" defaultValue={18}/>
                     </label>
                 </section>
                 <section>
@@ -48,13 +49,14 @@ function UserForm() {
                 </section>
                 <section>
                     <fieldset>
-                        <label>Country:{' '}
-                            {
+                        <label>Country:{' '}{
                                 countries.map((c: string, index: number) =>
-                                    <label key={c}>
-                                        <input type="radio" name="country" value={c}
-                                               defaultChecked={index === defaultCountry}/>{c}
-                                    </label>
+                                    <section key={c}>
+                                        <label>
+                                            <input type="radio" name="country" value={c}
+                                                   defaultChecked={index === defaultCountry}/>{c}
+                                        </label>
+                                    </section>
                                 )
                             }
                         </label>

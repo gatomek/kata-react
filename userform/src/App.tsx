@@ -5,11 +5,11 @@ import UserFormWithReducer from "./user/UserFormWithReducer.tsx";
 
 function App() {
   return (
-    <>
+    <div style={{display: "flex"}}>
         <UserForm/>
         <UserFormWithStates/>
         <UserFormWithReducer/>
-    </>
+    </div>
   )
 }
 

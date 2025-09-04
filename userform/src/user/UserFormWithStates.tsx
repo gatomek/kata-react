@@ -9,7 +9,7 @@ function UserFormWithStates() {
 
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
-    const [age, setAge] = useState<number>(0);
+    const [age, setAge] = useState<number>(18);
     const [consent, setConsent] = useState<boolean>(false);
     const [country, setCountry] = useState<string>(countries[defaultCountry]);
 
@@ -32,7 +32,7 @@ function UserFormWithStates() {
                     </label>
                 </section>
                 <section>
-                    <label>e-Mail:{' '}
+                    <label>EMail:{' '}
                         <input type="email" name="email" value={email}
                                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                         />
@@ -59,14 +59,16 @@ function UserFormWithStates() {
                         <label>Country:{' '}
                             {
                                 countries.map((c: string) =>
-                                    <label key={c}>
-                                        <input type="radio" name="country" value={c}
-                                               checked={country === c}
-                                               onChange={(e: ChangeEvent<HTMLInputElement>): void => {
-                                                   setCountry(e.target.value)
-                                               }}
-                                        />{c}
-                                    </label>
+                                    <section key={c}>
+                                        <label>
+                                            <input type="radio" name="country" value={c}
+                                                   checked={country === c}
+                                                   onChange={(e: ChangeEvent<HTMLInputElement>): void => {
+                                                       setCountry(e.target.value)
+                                                   }}
+                                            />{c}
+                                        </label>
+                                    </section>
                                 )
                             }
                         </label>

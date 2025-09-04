@@ -27,7 +27,7 @@ export const defaultCountry: number = 1;
 const initialPersonState: IPerson = {
     name: '',
     email: '',
-    age: 0,
+    age: 18,
     consent: false,
     country: countries[defaultCountry]
 };
@@ -61,7 +61,7 @@ function UserFormWithReducer() {
                     </label>
                 </section>
                 <section>
-                    <label>e-Mail:{' '}
+                    <label>EMail:{' '}
                         <input type="email" name="email" value={person.email}
                                onChange={(e: ChangeEvent<HTMLInputElement>) => handleStringChange(e)}
                         />
@@ -86,12 +86,14 @@ function UserFormWithReducer() {
                         <label>Country:{' '}
                             {
                                 countries.map((c: string) =>
-                                    <label key={c}>
-                                        <input type="radio" name="country" value={c}
-                                               checked={person.country === c}
-                                               onChange={(e: ChangeEvent<HTMLInputElement>): void => handleStringChange(e)}
-                                        />{c}
-                                    </label>
+                                    <section key={c}>
+                                        <label>
+                                            <input type="radio" name="country" value={c}
+                                                   checked={person.country === c}
+                                                   onChange={(e: ChangeEvent<HTMLInputElement>): void => handleStringChange(e)}
+                                            />{c}
+                                        </label>
+                                    </section>
                                 )
                             }
                         </label>
