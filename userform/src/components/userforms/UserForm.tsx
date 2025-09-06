@@ -1,7 +1,7 @@
-import type {IPerson} from "./model/IPerson.ts";
+import type {User} from "../user/model/User.ts";
 import {Submit} from "./Submit.tsx";
 import type {SyntheticEvent} from "react";
-import {countries} from "./model/countries.ts";
+import {countries} from "../user/model/countries.ts";
 
 const register = (e: SyntheticEvent<Element, Event>) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const register = (e: SyntheticEvent<Element, Event>) => {
     const consent: boolean = formData.get('consent') === 'on';
     const country: string = formData.get('country') as string;
 
-    const person: IPerson = {name, email, age, consent, country};
+    const person: User = {name, email, age, consent, country};
     console.log('User Form', person);
 }
 

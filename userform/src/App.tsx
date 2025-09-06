@@ -1,7 +1,7 @@
 import './App.css'
-import UserForm from "./user/UserForm.tsx";
-import UserFormWithStates from "./user/UserFormWithStates.tsx";
-import UserFormWithReducer from "./user/UserFormWithReducer.tsx";
+import UserForm from "./components/userforms/UserForm.tsx";
+import UserFormWithStates from "./components/userforms/UserFormWithStates.tsx";
+import {UserFormWithReducer} from "./components/userforms/UserFormWithReducer.tsx";
 
 function App() {
   return (

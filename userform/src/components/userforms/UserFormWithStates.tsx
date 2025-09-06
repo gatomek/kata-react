@@ -1,7 +1,7 @@
 import {type ChangeEvent, type SyntheticEvent, useState} from "react";
-import type {IPerson} from "./model/IPerson.ts";
+import type {User} from "../user/model/User.ts";
 import {Submit} from "./Submit.tsx";
-import {countries} from "./model/countries.ts";
+import {countries} from "../user/model/countries.ts";
 
 export const defaultCountry: number = 1;
 
@@ -16,7 +16,7 @@ function UserFormWithStates() {
     const register = (e: SyntheticEvent<Element, Event>) => {
         e.preventDefault();
 
-        const person: IPerson = {name, email, age, consent, country};
+        const person: User = {name, email, age, consent, country};
         console.log("User Form with State", person);
     }
 
