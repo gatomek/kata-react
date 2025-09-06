@@ -1,7 +1,11 @@
 # User Form Processing
 
+## App
+https://kata-react-userforms-gatomek.netlify.app/
+
+
 ## Todo:
-* add form with complex state and processing without reductor
+* add form with complex state and processing without reducer
 * add usage of select html tag
 * add Dashboard do review final data without console.log
 * add form to image upload
