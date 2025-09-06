@@ -8,7 +8,7 @@ type ListProps = {
 
 function Emitter({children}: ListProps) {
     const [text, setText] = useState<string>('');
-    const value:EmitterType = {text, setText}
+    const value: EmitterType = {text, setText}
 
     return (
         <EmitterContext value={value}>
