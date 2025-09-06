@@ -1,6 +1,6 @@
 import './App.css'
-import Section from "./content/Section.tsx";
-import Heading from "./content/Heading.tsx";
+import Section from "./components/Section.tsx";
+import Heading from "./components/Heading.tsx";
 
 function App() {
 
