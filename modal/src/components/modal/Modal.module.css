@@ -1,0 +1,22 @@
+.modal {
+    color: darkorange;
+    border: solid 1px Orange;
+    position: fixed;
+    left: 5vw;
+    right: 5vw;
+    top: 5vh;
+    bottom: 5vh;
+    background-color: ivory;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    color: Orange;
+    border: solid 1px Orange;
+}
+
+.button:hover {
+    color: Red;
+    border: solid 1px Red;
+}
